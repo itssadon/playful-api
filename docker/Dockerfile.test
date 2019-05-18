@@ -3,5 +3,5 @@ ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait
 RUN chmod +x /wait
 ENV NODE_ENV dev
 RUN npm install && npm install -g mocha
-ARG port=80
+ARG port=3500
 CMD /wait && mocha tests/unitTests.js --exit
