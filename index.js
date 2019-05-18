@@ -15,7 +15,9 @@ const app = express()
 const http = require('http').Server(app)
 
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.urlencoded({
+  extended: true
+}))
 app.use('/api', routes)
 app.use((req, res) => {
   res.status(404)
